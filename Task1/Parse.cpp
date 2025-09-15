@@ -59,7 +59,7 @@ void send_only(int sock, const struct sockaddr_in &serv_addr,
                        (const struct sockaddr*)&serv_addr,
                        sizeof(serv_addr));
 
-    cout << "✅ client: sent " << s << " bytes successfully\n";
+    cout << "client: sent " << s << " bytes successfully\n";
 
 }
 
@@ -136,7 +136,7 @@ int main() {
         string response = receive_response(sock);
 
         if (!response.empty()) {
-        cout << "📥 client got response: " << response << "\n";
+        cout << "client got response: " << response << "\n";
         csv << response << "\n";
         }
 
